@@ -1,9 +1,10 @@
+import os
 import tkinter as tk
 import csv
 from tkinter import messagebox
 from tkinter import filedialog
 from datetime import datetime
-
+from io import StringIO
 
 HEIGHT = 500
 WIDTH = 600
@@ -63,7 +64,7 @@ def create_csv():
     st9 = "POST3"
     st10 = "000000000007"
     st11 = "000000000000"
-    st12 = 000000000000
+    st12 = "000000000000"
     st13 = ""
     st14 = "000000"
     st15 = "00000000"
@@ -80,6 +81,7 @@ def create_csv():
     st26 = "N"
     st27 = "N"
     st28 = "7000"
+    output = StringIO(newline='')
     #split_entry(entry.get())
     n4 = convert_num(entry.get())
     #Select directory
@@ -88,10 +90,13 @@ def create_csv():
     print(name)
     #print(filename)
     with open(filename + '/' + name + '.dat', 'w', newline='') as f:
-        thewriter = csv.writer(f,delimiter='|')
-        for i in range(0,1):
-            n5 = str(n4-i)
-            thewriter.writerow([st1,st2,st3,st4,'64K_M2M_4G_Orange_V2','','0000','0000','10000000','10000000','000000001E197203'])
+        thewriter = csv.writer(f,delimiter='|',lineterminator='\n')
+        for i in range(0,2):
+            if(i==0):
+                thewriter.writerow([st1,st2,st3,st4,st5,st6,st7,st8,st9,st10,st11,st12,st13,st14,st15,st16,st17,st18,st19,st20,st21,st22,st23,st24,st25,st26,st27,st28,''])
+            else:
+                thewriter.writerow([st1,st2,st3,st4,st5,st6,st7,st8,st9,st10,st11,st12,st13,st14,st15,st16,st17,st18,st19,st20,st21,st22,st23,st24,st25,st26,st27,st28,''])
+
         tk.messagebox.showinfo(message='File ' + 'mycsv.csv' + ' was generated in ' + filename )
 
 
