@@ -57,29 +57,29 @@ def create_csv():
     st3 = getDate()
     st4 = str(entry.get())
     st5 = str(entry1.get())
-    st6 = ''
+    st6 = ""
     st7 = "0041767612266"
-    st8 = ''
+    st8 = ""
     st9 = "POST3"
     st10 = "000000000007"
     st11 = "000000000000"
-    st12
-    st13
-    st14
-    st15
-    st16
-    st17
-    st18
-    st19
-    st20
-    st21
-    st22
-    st23
-    st24
-    st25
-    st26
-    st27
-    st28
+    st12 = 000000000000
+    st13 = ""
+    st14 = "000000"
+    st15 = "00000000"
+    st16 = "2A"
+    st17 = "02"
+    st18 = "000000"
+    st19 = "03f2083c8628"
+    st20 = "0"
+    st21 = "0"
+    st22 = "0041767613333"
+    st23 = ""
+    st24 = "90000"
+    st25 = "80000"
+    st26 = "N"
+    st27 = "N"
+    st28 = "7000"
     #split_entry(entry.get())
     n4 = convert_num(entry.get())
     #Select directory
